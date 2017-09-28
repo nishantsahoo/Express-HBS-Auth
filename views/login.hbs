@@ -3,18 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <title>Signup</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+    	body {
+  			margin:0px;
+  			font-family: 'Ubuntu', sans-serif;
+			background: #4568DC;  /* fallback for old browsers */
+			background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);  /* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(to right, #B06AB3, #4568DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+		}
+		
+		h1, h2, h3, h4, h5, h6, a {
+		  margin:0; padding:0;
+		}
+
+		#username { 
+			width: 100%; 
+			margin-bottom: 10px; 
+			background: rgba(0,0,0,0.3);
+			border: none;
+			outline: none;
+			padding: 10px;
+			font-size: 13px;
+			color: #fff;
+			text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+			border: 1px solid rgba(0,0,0,0.3);
+			border-radius: 4px;
+			box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+			-webkit-transition: box-shadow .5s ease;
+			-moz-transition: box-shadow .5s ease;
+			-o-transition: box-shadow .5s ease;
+			-ms-transition: box-shadow .5s ease;
+			transition: box-shadow .5s ease;
+		}
+
+		#password { 
+			width: 100%; 
+			margin-bottom: 10px; 
+			background: rgba(0,0,0,0.3);
+			border: none;
+			outline: none;
+			padding: 10px;
+			font-size: 13px;
+			color: #fff;
+			text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+			border: 1px solid rgba(0,0,0,0.3);
+			border-radius: 4px;
+			box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+			-webkit-transition: box-shadow .5s ease;
+			-moz-transition: box-shadow .5s ease;
+			-o-transition: box-shadow .5s ease;
+			-ms-transition: box-shadow .5s ease;
+			transition: box-shadow .5s ease;
+		}
+
+		input {
+			width: 107%; 
+			margin-bottom: 10px; 
+			background: rgba(0,0,0,0.3);
+			border: none;
+			outline: none;
+			padding: 10px;
+			font-size: 13px;
+			color: #fff;
+			text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+			border: 1px solid rgba(0,0,0,0.3);
+			border-radius: 4px;
+			box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+			-webkit-transition: box-shadow .5s ease;
+			-moz-transition: box-shadow .5s ease;
+			-o-transition: box-shadow .5s ease;
+			-ms-transition: box-shadow .5s ease;
+			transition: box-shadow .5s ease;	
+		}
+
+		input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
+
+		#form-login { 
+			align-items: center;
+			text-align: center;
+			top: 50%;
+			left: 50%;
+			margin-left: 37%;
+			margin-top: 17%;
+			/*margin: -150px 0 0 -150px;*/
+			width:300px;
+			height:300px;
+		}
+
+	</style>
 </head>
 <body>
-
-<form method="post" action="/login">
-    <input type="text" placeholder="username" name="username"><br>
-    <input type="password" placeholder="password" name="password"><br>
-    <input type="submit" value="Sign In">
-    <input type="submit" formaction="/authorize" value="Get Token">
-</form>
-
-Don't have account ?
-<a href="/signup">Sign up</a>
-
+<div id="form-login">
+	<form method="post" action="/login">
+	    <input type="text" placeholder="username" name="username" id="username"><br>
+	    <input type="password" placeholder="password" name="password" id="password"><br>
+	    <input type="submit" value="Sign In">
+	    <input type="submit" formaction="/authorize" value="Get Token">
+	</form>
+	<p>Don't have account? <a href="/signup">Sign up</a></p>
+</div>
 </body>
 </html>
